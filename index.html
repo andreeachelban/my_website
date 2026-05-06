@@ -3,45 +3,263 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Andreea-Oana Chelban | CV</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  body {
-    font-family: Inter, Arial, sans-serif;
-    color: #151515;
-    line-height: 1.6;
-    position: relative;
-    overflow-x: hidden;
-    background: #f6f1ea;
-  }
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: #151515;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+      background: #f6f1ea;
+    }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("cellTracking.gif") center/cover no-repeat;
-    opacity: 0.10;
-    z-index: -2;
-    filter: blur(2px) grayscale(20%);
-  }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("cellTracking.gif") center/cover no-repeat;
+      opacity: 0.10;
+      z-index: -2;
+      filter: blur(2px) grayscale(20%);
+    }
 
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(246, 241, 234, 0.82);
-    z-index: -1;
-  }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(246, 241, 234, 0.82);
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 34px 22px 70px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 54px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 42px;
+      align-items: center;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      color: #9a6233;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 86px);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .intro {
+      max-width: 660px;
+      font-size: 19px;
+      color: #3c3c3c;
+    }
+
+    .photo-card {
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.10);
+      transform: rotate(1deg);
+    }
+
+    .photo-card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 24px;
+      filter: saturate(0.96) contrast(1.02);
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .pill-card,
+    section {
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 26px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .pill-card span {
+      display: block;
+      color: #777;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .pill-card strong {
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 26px;
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      color: #9a6233;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 22px;
+    }
+
+    .item {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .item:first-of-type {
+      padding-top: 0;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    h3 {
+      font-size: 21px;
+      letter-spacing: -0.03em;
+      margin-bottom: 5px;
+    }
+
+    .meta {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #333;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #151515;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    footer {
+      margin-top: 38px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      header,
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero,
+      .grid,
+      .quick-info {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card {
+        transform: none;
+        max-width: 340px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="page">
+
     <header>
       <div class="logo">AOC.</div>
+
       <nav>
         <a href="#research">Research</a>
         <a href="#education">Education</a>
@@ -51,74 +269,108 @@
     </header>
 
     <main>
+
       <section class="hero">
         <div>
-          <p class="eyebrow">Biological Physics · Data-Driven Research · Basel</p>
+          <p class="eyebrow">
+            Biological Physics · Data-Driven Research · Basel
+          </p>
+
           <h1>Andreea-Oana Chelban</h1>
+
           <p class="intro">
-            PhD student in Biological Physics at the Biozentrum, University of Basel, studying bacterial multicellular development through microscopy, quantitative image analysis, computational modelling and data-driven approaches.
+            PhD student in Biological Physics at the Biozentrum,
+            University of Basel, studying bacterial multicellular
+            development through microscopy, quantitative image
+            analysis, computational modelling and data-driven approaches.
           </p>
         </div>
+
         <div class="photo-card">
-          <img src="andreea_chelban_9x9.jpg" alt="Portrait of Andreea-Oana Chelban" />
+          <img src="andreea_chelban_9x9.jpg" alt="Portrait of Andreea-Oana Chelban">
         </div>
       </section>
 
       <div class="quick-info">
-        <div class="pill-card"><span>Current role</span><strong>PhD Student</strong></div>
-        <div class="pill-card"><span>Location</span><strong>Basel, Switzerland</strong></div>
-        <div class="pill-card"><span>Field</span><strong>Biological Physics</strong></div>
-        <div class="pill-card"><span>Hobbies</span><strong>Running & Clay Modelling</strong></div>
+        <div class="pill-card">
+          <span>Current role</span>
+          <strong>PhD Student</strong>
+        </div>
+
+        <div class="pill-card">
+          <span>Location</span>
+          <strong>Basel, Switzerland</strong>
+        </div>
+
+        <div class="pill-card">
+          <span>Field</span>
+          <strong>Biological Physics</strong>
+        </div>
+
+        <div class="pill-card">
+          <span>Hobbies</span>
+          <strong>Running & Clay Modelling</strong>
+        </div>
       </div>
 
       <div class="grid">
+
         <section id="research">
           <h2>Research Focus</h2>
+
           <p>
-            I work on the data-driven analysis of bacterial swarms, combining automated microscopy, image and time-series analysis, computational modelling and deep learning for single-cell segmentation and tracking.
+            I work on the data-driven analysis of bacterial swarms,
+            combining automated microscopy, image and time-series analysis,
+            computational modelling and deep learning for single-cell
+            segmentation and tracking.
           </p>
         </section>
 
         <section>
           <h2>Research Experience</h2>
+
           <div class="item">
             <h3>PhD Project: Data-Driven Analysis of Bacterial Swarms</h3>
-            <p class="meta">Drescher Lab, Biozentrum, University of Basel · 2022 — Present</p>
+
+            <p class="meta">
+              Drescher Lab, Biozentrum, University of Basel · 2022 — Present
+            </p>
+
             <ul>
-              <li>Analysed large-scale microscopy datasets to study bacterial swarming as collective motion.</li>
-              <li>Designed automated microscopy workflows for high-throughput data acquisition.</li>
-              <li>Developed Matlab pipelines for image and time-series data analysis.</li>
-              <li>Applied deep learning methods for single-cell instance segmentation and tracking.</li>
+              <li>Analysed large-scale microscopy datasets.</li>
+              <li>Designed automated microscopy workflows.</li>
+              <li>Developed Matlab analysis pipelines.</li>
+              <li>Applied deep learning for segmentation and tracking.</li>
             </ul>
           </div>
+
           <div class="item">
             <h3>Master Project: Pattern Formation and Synchronisation</h3>
-            <p class="meta">LMU Munich · October 2020 — March 2022</p>
+
+            <p class="meta">
+              LMU Munich · October 2020 — March 2022
+            </p>
+
             <ul>
-              <li>Developed and simulated reaction-diffusion models of protein pattern formation.</li>
-              <li>Used numerical schemes, correlation metrics, bifurcation analysis and parameter sweeps.</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h3>Bachelor Project: Effective Electric Field in YbF</h3>
-            <p class="meta">University of Groningen · April 2018 — July 2018</p>
-            <ul>
-              <li>Performed large-scale quantum chemistry calculations using relativistic coupled-cluster methods.</li>
-              <li>Ran high-performance computations on the Peregrine HPC cluster.</li>
+              <li>Developed reaction-diffusion models.</li>
+              <li>Studied oscillatory dynamics and synchronisation.</li>
             </ul>
           </div>
         </section>
 
         <section id="education">
           <h2>Education</h2>
+
           <div class="item">
             <h3>PhD Student in Biological Physics</h3>
-            <p class="meta">Biozentrum, University of Basel · June 2022 — Present</p>
+            <p class="meta">University of Basel · 2022 — Present</p>
           </div>
+
           <div class="item">
             <h3>Master of Science in Physics</h3>
-            <p class="meta">Ludwig Maximilian University of Munich · 2019 — 2022</p>
+            <p class="meta">LMU Munich · 2019 — 2022</p>
           </div>
+
           <div class="item">
             <h3>Bachelor of Science in Physics</h3>
             <p class="meta">University of Groningen · 2015 — 2018</p>
@@ -127,71 +379,110 @@
 
         <section id="skills">
           <h2>Skills</h2>
+
           <div class="tags">
             <span class="tag">Matlab</span>
             <span class="tag">Python</span>
-            <span class="tag">Image Analysis</span>
             <span class="tag">Deep Learning</span>
-            <span class="tag">Automated Microscopy</span>
-            <span class="tag">Mathematica</span>
-            <span class="tag">Unix/Linux</span>
+            <span class="tag">Image Analysis</span>
             <span class="tag">Scientific Computing</span>
+            <span class="tag">Microscopy</span>
+            <span class="tag">Unix/Linux</span>
             <span class="tag">Mentorship</span>
-            <span class="tag">Teamwork</span>
           </div>
         </section>
 
         <section class="full">
           <h2>Work Experience</h2>
+
           <div class="item">
             <h3>Webmaster of the LS Frey Website</h3>
-            <p class="meta">LMU Munich · October 2020 — February 2022</p>
+
+            <p class="meta">
+              LMU Munich · October 2020 — February 2022
+            </p>
+
             <ul>
-              <li>Managed and maintained the research group website using HTML.</li>
-              <li>Implemented updates, added new members and maintained website content.</li>
-              <li>Responded to internal requests and ensured the site remained updated and functional.</li>
+              <li>Managed and maintained the research group website.</li>
+              <li>Implemented HTML updates and content changes.</li>
             </ul>
           </div>
+
           <div class="item">
-            <h3>Summer Internship in Human Resource Management</h3>
-            <p class="meta">Arabesque Construction Retail Company · July — August 2014</p>
+            <h3>HR Internship</h3>
+
+            <p class="meta">
+              Arabesque Construction Retail Company · 2014
+            </p>
+
             <ul>
-              <li>Coordinated candidate outreach and interview scheduling.</li>
-              <li>Administered technical assessments and conducted first-round interviews.</li>
+              <li>Coordinated candidate outreach and interviews.</li>
+              <li>Conducted first-round assessments.</li>
             </ul>
           </div>
         </section>
 
         <section class="full">
           <h2>Teaching, Leadership & Service</h2>
+
           <div class="item">
-            <h3>Teaching and Mentorship</h3>
             <ul>
-              <li>Co-developed lecture materials for Physics of Life for Biology Bachelor students.</li>
-              <li>Organised computational modules for a Biology block course attended by 60 students.</li>
-              <li>Mentored Bachelor, high-school and summer research students.</li>
+              <li>Co-developed Physics of Life lecture materials.</li>
+              <li>Mentored Bachelor and research students.</li>
+              <li>Organised computational biology course modules.</li>
             </ul>
           </div>
+
           <div class="item">
             <h3>PhD Representative</h3>
-            <p class="meta">University of Basel · November 2024 — November 2025</p>
-            <p>Organised interdepartmental networking events for PhD students.</p>
+
+            <p class="meta">
+              University of Basel · 2024 — 2025
+            </p>
+
+            <p>
+              Organised interdepartmental networking events
+              for PhD students.
+            </p>
           </div>
         </section>
 
         <section class="full" id="contact">
           <h2>Contact</h2>
+
           <div class="contact-list">
-            <p>Email: <a href="mailto:andreea.chelban@unibas.ch">andreea.chelban@unibas.ch</a> · <a href="mailto:oana.chelban@gmail.com">oana.chelban@gmail.com</a></p>
-            <p>Phone: <a href="tel:+41772787277">+41 77 278 72 77</a></p>
-            <p>Location: Basel, Switzerland</p>
-            <p>GitHub: <a href="https://github.com/andreeachelban">github.com/andreeachelban</a></p>
+            <p>
+              Email:
+              <a href="mailto:andreea.chelban@unibas.ch">
+                andreea.chelban@unibas.ch
+              </a>
+            </p>
+
+            <p>
+              Phone:
+              <a href="tel:+41772787277">
+                +41 77 278 72 77
+              </a>
+            </p>
+
+            <p>Basel, Switzerland</p>
+
+            <p>
+              GitHub:
+              <a href="https://github.com/andreeachelban">
+                github.com/andreeachelban
+              </a>
+            </p>
           </div>
         </section>
+
       </div>
     </main>
 
-    <footer>© 2026 Andreea-Oana Chelban. Built with GitHub Pages.</footer>
+    <footer>
+      © 2026 Andreea-Oana Chelban
+    </footer>
+
   </div>
 </body>
 </html>
